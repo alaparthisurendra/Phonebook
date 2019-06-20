@@ -1,0 +1,14 @@
+<div>
+
+  <input type="text" value="{{developer}}">  <!--string Interpolation-->
+<br> <br>
+  <input type="text" [value]="developer">    <!--Proprty Binding-->
+
+  <div [ngClass]="red">
+    Not logged in-- It wont work as no such variable defined in ts
+  </div>
+
+  <div [ngClass]="{'red':isLoggedIn, 'green':isLoggedIn}">Logged In </div>
+<!--Evaluating through method-->
+<div [ngClass]="{'red':!getLoggedInStatus(), 'green':getLoggedInStatus()}">Logged In </div>
+</div>

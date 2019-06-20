@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+      <section class="col-sm-6 offset-sm-3 main-section ">
+        <form ngNativeValidate #contactform="ngForm" (ngSubmit)="onSubmitHandler(contactform)">
+          <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text"  required class="form-control" placeholder="Enter User Name"
+               ngModel name="username">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="staticEmail"  class="col-sm-2 col-form-label">Phone</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" required placeholder="Enter Phone" ngModel name="phone">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" required placeholder="Enter Email" ngModel name="email">
+            </div>
+          </div>
+  
+          <div class="form-group row">
+            <div class="col-sm-10 offset-sm-2">
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <a href="/contacts/" class="link">Rich Go Back</a>
+            </div>
+          </div>
+  <div class="alert alert-success">
+    {{submissionStatus}}
+  </div>
+        </form>
+  
+      </section>
+    </div>
+  </div>

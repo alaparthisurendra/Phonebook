@@ -1,0 +1,11 @@
+<div>
+
+   <!--the following wont work as no function is JS defined-->
+  <button type="button" onclick="onTestBtnClick()">Test</button>
+<br>
+<br>
+ <!--the following will work as  function is JS defined-->
+  <button type="button" (click)="onTestBtnClick($event)">Testing Button</button>
+
+  <input type="button" value="Angular mouse over Test" (mouseover)="onTestBtnClick($event)">
+</div>>
